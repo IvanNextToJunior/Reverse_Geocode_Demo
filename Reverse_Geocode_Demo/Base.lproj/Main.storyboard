@@ -66,6 +66,7 @@
                     <connections>
                         <outlet property="geocodeLabel" destination="er6-Jc-m3v" id="h13-Eb-Zhf"/>
                         <outlet property="mapView" destination="MfK-Ss-IgN" id="8ZT-PH-Ppe"/>
+                        <outlet property="pinIcon" destination="qSc-Nm-qpy" id="c7R-WZ-rG0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

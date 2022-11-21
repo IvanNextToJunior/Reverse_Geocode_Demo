@@ -13,12 +13,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var geocodeLabel: UILabel!
-    
-    var geocoder: CLGeocoder!
-    
+    @IBOutlet weak var pinIcon: UIImageView!
     
     @IBAction func reverseGeocodeButtonTouchUpInside(_ sender: UIButton) {
     }
+    
+    var geocoder: CLGeocoder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
