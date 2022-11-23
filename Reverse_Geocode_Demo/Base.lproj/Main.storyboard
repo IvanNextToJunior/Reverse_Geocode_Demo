@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MfK-Ss-IgN">
-                                <rect key="frame" x="-20" y="0.0" width="414" height="844"/>
+                                <rect key="frame" x="-20" y="0.0" width="434" height="844"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er6-Jc-m3v">
                                 <rect key="frame" x="0.0" y="852" width="285" height="24"/>
@@ -60,7 +60,7 @@
                             <constraint firstItem="er6-Jc-m3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mkT-1s-jvJ"/>
                             <constraint firstItem="MfK-Ss-IgN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-20" id="u2x-WH-rbt"/>
                             <constraint firstItem="MfK-Ss-IgN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xta-Ha-G1M"/>
-                            <constraint firstItem="MfK-Ss-IgN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-20" id="yyo-bP-nM1"/>
+                            <constraint firstItem="MfK-Ss-IgN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="yyo-bP-nM1"/>
                         </constraints>
                     </view>
                     <connections>
