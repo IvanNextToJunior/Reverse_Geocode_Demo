@@ -20,7 +20,7 @@
                                 <rect key="frame" x="-20" y="0.0" width="434" height="844"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er6-Jc-m3v">
-                                <rect key="frame" x="0.0" y="852" width="285" height="24"/>
+                                <rect key="frame" x="0.0" y="852" width="48" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,30 +32,13 @@
                                     <constraint firstAttribute="width" constant="134" id="ew1-s8-rg9"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVP-Bf-939">
-                                <rect key="frame" x="293" y="846" width="121" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="7CV-lH-2B4"/>
-                                    <constraint firstAttribute="height" constant="30" id="QXb-Hm-jQi"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Reverse Geocode">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="reverseGeocodeButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j29-W4-pSL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qSc-Nm-qpy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3B1-SN-Ui0"/>
-                            <constraint firstItem="eVP-Bf-939" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9E7-GZ-Gl1"/>
                             <constraint firstAttribute="bottom" secondItem="er6-Jc-m3v" secondAttribute="bottom" constant="20" symbolic="YES" id="MKu-G1-Tyx"/>
                             <constraint firstItem="qSc-Nm-qpy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bdh-ng-se7"/>
-                            <constraint firstItem="eVP-Bf-939" firstAttribute="centerY" secondItem="er6-Jc-m3v" secondAttribute="centerY" constant="-3" id="hPr-lE-NmH"/>
-                            <constraint firstItem="eVP-Bf-939" firstAttribute="leading" secondItem="er6-Jc-m3v" secondAttribute="trailing" constant="8" symbolic="YES" id="jBQ-78-hyq"/>
                             <constraint firstItem="er6-Jc-m3v" firstAttribute="top" secondItem="MfK-Ss-IgN" secondAttribute="bottom" constant="8" symbolic="YES" id="lux-PG-yJb"/>
                             <constraint firstItem="er6-Jc-m3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mkT-1s-jvJ"/>
                             <constraint firstItem="MfK-Ss-IgN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-20" id="u2x-WH-rbt"/>
