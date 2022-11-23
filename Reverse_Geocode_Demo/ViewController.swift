@@ -16,9 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var pinIcon: UIImageView!
     
     @IBAction func reverseGeocodeButtonTouchUpInside(_ sender: UIButton) {
-    let coordinate = locationAtcenterOfMapView()
-    let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-    startReverseGeocodeLocation(location: location)
+        
+        let coordinate = locationAtcenterOfMapView()
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        startReverseGeocodeLocation(location: location)
     }
     
     var geocoder: CLGeocoder!
@@ -42,8 +43,9 @@ class ViewController: UIViewController {
         geocoder.reverseGeocodeLocation(location) { placemarks, error in
            
             if error != nil {
-        
+                
                 let alert = UIAlertController(title: "There was a problem reverse geocoding", message: error!.localizedDescription, preferredStyle: .alert)
+                
                 self.present(alert, animated: true, completion: nil)
             }
       
