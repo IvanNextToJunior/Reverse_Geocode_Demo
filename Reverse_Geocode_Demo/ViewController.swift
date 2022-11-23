@@ -46,9 +46,15 @@ class ViewController: UIViewController {
            
             if error != nil {
                 
+             
                 let alert = UIAlertController(title: "There was a problem reverse geocoding", message: error!.localizedDescription, preferredStyle: .alert)
-                
+              
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+               
                 self.present(alert, animated: true, completion: nil)
+         
+            
             }
       
             let mappedPlacesDescriptions = NSMutableSet()
