@@ -11,6 +11,8 @@ import CoreLocation
 
 class ViewController: UIViewController {
 
+    /* MARK: Project taken from: https://www.coursera.org/learn/games/lecture/CdQWd/reverse-geocode-case-study-01*/
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var geocodeLabel: UILabel!
     @IBOutlet weak var pinIcon: UIImageView!
