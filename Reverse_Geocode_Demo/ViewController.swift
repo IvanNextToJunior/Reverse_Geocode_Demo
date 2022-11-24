@@ -17,14 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var geocodeLabel: UILabel!
     @IBOutlet weak var pinIcon: UIImageView!
     
-    @IBAction func reverseGeocodeButtonTouchUpInside(_ sender: UIButton) {
-        
-        let coordinate = locationAtcenterOfMapView()
-        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        startReverseGeocodeLocation(location: location)
-    }
-    
     var geocoder: CLGeocoder!
+    var isLookingUp = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +26,7 @@ class ViewController: UIViewController {
         geocoder = CLGeocoder()
         geocodeLabel.text = ""
         geocodeLabel.alpha = 0.5
-        
+        mapView.delegate = self
     }
     
     func locationAtcenterOfMapView () -> CLLocationCoordinate2D {
@@ -43,30 +37,30 @@ class ViewController: UIViewController {
     
     func startReverseGeocodeLocation(location: CLLocation) {
         geocoder.reverseGeocodeLocation(location) { placemarks, error in
-           
+            
             if error != nil {
                 
-             
+                
                 let alert = UIAlertController(title: "There was a problem reverse geocoding", message: error!.localizedDescription, preferredStyle: .alert)
-              
+                
                 let action = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(action)
-               
+                
                 self.present(alert, animated: true, completion: nil)
-         
-            
+                
+                
             }
-      
+            
             let mappedPlacesDescriptions = NSMutableSet()
             
             guard let placemarks = placemarks else {return}
-           
+            
             for placemark in placemarks {
-               
+                
                 if placemark.name != nil {
                     mappedPlacesDescriptions.add(placemark.name!)
                 }
-          
+                
                 if placemark.administrativeArea != nil {
                     mappedPlacesDescriptions.add(placemark.administrativeArea!)
                 }
@@ -74,14 +68,33 @@ class ViewController: UIViewController {
                 if placemark.country != nil {
                     mappedPlacesDescriptions.add(placemark.country!)
                     mappedPlacesDescriptions.addObjects(from: placemark.areasOfInterest!)
-               }
-               
-              
+                }
+                
+                
                 self.geocodeLabel.text = (mappedPlacesDescriptions.allObjects as! [String]).joined(separator: "\n")
-               self.geocodeLabel.alpha = 1.0
+                self.geocodeLabel.alpha = 1.0
+           
+                self.isLookingUp = false
             }
-        
+            
         }
+    }
+    
+    func callBackFunction() {
+        
+        if isLookingUp == false {
+       
+        isLookingUp = true
+        let coordinate = locationAtcenterOfMapView()
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        
+        startReverseGeocodeLocation(location: location)
+    }
     }
 }
 
+extension ViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        callBackFunction()
+    }
+}

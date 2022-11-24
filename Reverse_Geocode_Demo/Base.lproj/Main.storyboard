@@ -20,7 +20,7 @@
                                 <rect key="frame" x="-20" y="0.0" width="434" height="844"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er6-Jc-m3v">
-                                <rect key="frame" x="0.0" y="852" width="48" height="24"/>
+                                <rect key="frame" x="0.0" y="852" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,10 +37,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qSc-Nm-qpy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3B1-SN-Ui0"/>
-                            <constraint firstAttribute="bottom" secondItem="er6-Jc-m3v" secondAttribute="bottom" constant="20" symbolic="YES" id="MKu-G1-Tyx"/>
+                            <constraint firstItem="er6-Jc-m3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EoU-aa-cIb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="er6-Jc-m3v" secondAttribute="trailing" id="FrU-Ju-iiN"/>
                             <constraint firstItem="qSc-Nm-qpy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bdh-ng-se7"/>
-                            <constraint firstItem="er6-Jc-m3v" firstAttribute="top" secondItem="MfK-Ss-IgN" secondAttribute="bottom" constant="8" symbolic="YES" id="lux-PG-yJb"/>
-                            <constraint firstItem="er6-Jc-m3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mkT-1s-jvJ"/>
+                            <constraint firstItem="er6-Jc-m3v" firstAttribute="top" secondItem="MfK-Ss-IgN" secondAttribute="bottom" constant="8" symbolic="YES" id="sUG-Yo-0G6"/>
+                            <constraint firstAttribute="bottom" secondItem="er6-Jc-m3v" secondAttribute="bottom" constant="20" symbolic="YES" id="sZd-kB-OKZ"/>
                             <constraint firstItem="MfK-Ss-IgN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-20" id="u2x-WH-rbt"/>
                             <constraint firstItem="MfK-Ss-IgN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xta-Ha-G1M"/>
                             <constraint firstItem="MfK-Ss-IgN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="yyo-bP-nM1"/>
