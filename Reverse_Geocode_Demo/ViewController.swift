@@ -69,8 +69,8 @@ class ViewController: UIViewController {
                     mappedPlacesDescriptions.add(placemark.country!)
                 }
               
-                if let areasOfInterest = placemark.areasOfInterest {
-                mappedPlacesDescriptions.addObjects(from: areasOfInterest)
+                if placemark.areasOfInterest != nil {
+                    mappedPlacesDescriptions.addObjects(from: placemark.areasOfInterest!)
                 }
                 
                 self.geocodeLabel.text = (mappedPlacesDescriptions.allObjects as! [String]).joined(separator: "\n")
